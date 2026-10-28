@@ -42,6 +42,12 @@
       "sourceType": "github",
       "skillPath": "plugins/claude/svelte/skills/svelte-core-bestpractices/SKILL.md",
       "computedHash": "3cd6c1f1a92b8bf52af8120e5cb3a93b5512f83b905fd902b895adafb7225456"
+    },
+    "voicestudio": {
+      "source": "debpalash/VoiceStudio",
+      "sourceType": "github",
+      "skillPath": "skills/voicestudio/SKILL.md",
+      "computedHash": "24c22dc99b617db1258e5424050ff17590b294b4003f2d57f2d906898fddcedd"
     }
   }
 }
