@@ -81,3 +81,34 @@ Laced, SEW, Devil's Finger, Brainwashed, Oops. Демо: `cdn-staging.shadylady.
 
 - `stake.com` — 403 (Cloudflare bot protection), не обходили.
 - `shadylady.io` — сброс соединения. Игры при этом доступны напрямую с CDN.
+
+## InOut — Megablock (stage, 28.10.2026)
+
+Источник: `megablock-stage.inoutgames.dev` (стейдж, без authToken — раунд не стартует, «Login Required»).
+Протокол с сервером игры не снят: нужен стейдж-токен.
+
+### Архитектура: Unity-игра внутри веб-оболочки платформы
+
+| Слой | Что используют |
+|---|---|
+| Сцена игры | **Unity WebGL** (`#unity-canvas`, 1280×720, WebGL2). Билд: wasm 11.75 МБ + data 5.1 МБ + framework 0.3 МБ (brotli) |
+| Оболочка платформы | **React** (styled-components) + **XState** |
+| Оверлеи | Окна big win и cashout — **Spine** в веб-слое, текстуры KTX2/Basis (транскодер `basis_transcoder.wasm`) |
+| Звук | **Howler.js**, 20 файлов `.m4a`, 1.05 МБ |
+| Переводы | Tolgee (`i18n.inout.games`), общий словарь платформы (в нём есть ключи других игр, например Limbo) |
+| Бэкенд | `api-stage.inoutgames.dev` (REST) + `game-api-v2-stage.inoutgames.dev` (WebSocket) |
+| Манифест | `meta`: gameMode=megablock, gameCategory=road, team=CometGames, engine=unity, version=1.0.0, hasBonusGame=false |
+
+### Оболочка (одинаковая для игр платформы)
+Кнопки и экраны в DOM: настройки, смена аватара, звук и музыка отдельно, «Space to spin & go»,
+Provably fair, правила, история ставок, How to play, BALANCE, DIFFICULTY (Easy…), CASHOUT, BET ±, Play, Autoplay.
+Социальное доказательство: лента «Live wins» и счётчик «Online: ~15 000».
+
+### Звуковая карта (20 файлов)
+- Персонаж-строитель Ральф: `RalfWalk`, `HappyRalf`, `AngryRalf`.
+- Раунд: `SpinRelease`, `SpinWin`, `SpinLoose`, `CoinsCycle`, `WinTableSlide`, `cashout`.
+- Уровни выигрыша: `superWin`, `megaWin`.
+- Высота башни (смена мира): `CloudAppear`, `CloudDisappear0/1/None`, `Airplane`, `Comet`, `SpaceShip`.
+- Музыка: один `backgroundMusic` (545 КБ).
+
+Для сравнения: у Laced 79 звуков и 6 музыкальных треков.
