@@ -38,5 +38,8 @@
         "repo": "rig-c/core"
       }
     }
+  },
+  "env": {
+    "NODE_USE_ENV_PROXY": "1"
   }
 }
