@@ -161,8 +161,11 @@ for (const f of page.frames()) {
     if (b && (!box || b.width * b.height > box.width * box.height)) box = b;
   }
 }
-if (box) await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2).catch(() => {});
-await page.waitForTimeout(1500);
+// Two clicks: the first often lands on a "click to continue" splash, the second focuses the game.
+for (let i = 0; i < 2 && box; i++) {
+  await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2).catch(() => {});
+  await page.waitForTimeout(2500);
+}
 const spinLog = [];
 for (let i = 1; i <= spins; i++) {
   const before = api.length + sockets.reduce((n, s) => n + s.frames.length, 0);
