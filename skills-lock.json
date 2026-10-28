@@ -6,6 +6,42 @@
       "sourceType": "github",
       "skillPath": "skills/find-skills/SKILL.md",
       "computedHash": "913b9d37d0d54047dd65222bb8c67b2bf04e3cb87dcad1729068d7a8b2c8c396"
+    },
+    "music": {
+      "source": "elevenlabs/skills",
+      "sourceType": "github",
+      "skillPath": "music/SKILL.md",
+      "computedHash": "f5307770bacfea37e8fb49aa1d5588d6af15dfdcec8a23d4bac781a0c26685de"
+    },
+    "sound-effects": {
+      "source": "elevenlabs/skills",
+      "sourceType": "github",
+      "skillPath": "sound-effects/SKILL.md",
+      "computedHash": "90a38dd66bf6c5d900778fe5287e50104e404b9fc29027c774c88dbfe63a8890"
+    },
+    "stake-math-sdk": {
+      "source": "reskin-games/stake-engine-skills",
+      "sourceType": "github",
+      "skillPath": "stake-math-sdk/SKILL.md",
+      "computedHash": "95aa4e3c90118cf965a74956bf13986782b61b978ebf36f2c6d0266f1bb5adb7"
+    },
+    "stake-web-sdk": {
+      "source": "reskin-games/stake-engine-skills",
+      "sourceType": "github",
+      "skillPath": "stake-web-sdk/SKILL.md",
+      "computedHash": "07ffff54f8e9267a7406296e988bf97e8890a4dfc8b181c3d190bb1614e5112b"
+    },
+    "svelte-code-writer": {
+      "source": "sveltejs/ai-tools",
+      "sourceType": "github",
+      "skillPath": "plugins/claude/svelte/skills/svelte-code-writer/SKILL.md",
+      "computedHash": "abe888cce357ab0fa0104ff2266edaf9c3a8382320b303f920cd777762a6bc85"
+    },
+    "svelte-core-bestpractices": {
+      "source": "sveltejs/ai-tools",
+      "sourceType": "github",
+      "skillPath": "plugins/claude/svelte/skills/svelte-core-bestpractices/SKILL.md",
+      "computedHash": "3cd6c1f1a92b8bf52af8120e5cb3a93b5512f83b905fd902b895adafb7225456"
     }
   }
 }
