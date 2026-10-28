@@ -1,4 +1,8 @@
 {
+  "enabledPlugins": {
+    "text-to-cad@earthtojake": true,
+    "rea@rea": true
+  },
   "extraKnownMarketplaces": {
     "earthtojake": {
       "source": {
@@ -6,9 +10,12 @@
         "repo": "earthtojake/text-to-cad",
         "ref": "latest"
       }
+    },
+    "rea": {
+      "source": {
+        "source": "github",
+        "repo": "morluto/rea"
+      }
     }
-  },
-  "enabledPlugins": {
-    "text-to-cad@earthtojake": true
   }
 }
