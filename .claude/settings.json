@@ -40,6 +40,7 @@
     }
   },
   "env": {
-    "NODE_USE_ENV_PROXY": "1"
+    "NODE_USE_ENV_PROXY": "1",
+    "PHASER_AE_BROWSER_WEBGPU": "off"
   }
 }

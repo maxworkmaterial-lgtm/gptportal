@@ -1,0 +1,28 @@
+{
+  "name": "untitled-game",
+  "screen": {
+    "width": 1280,
+    "height": 720,
+    "fit": "letterbox",
+    "background": "#000000"
+  },
+  "seed": 63923,
+  "backgroundPolicy": "pause",
+  "packs": [
+    {
+      "id": "core-2d"
+    },
+    {
+      "id": "ui-skins"
+    },
+    {
+      "id": "ui-skin-candy"
+    },
+    {
+      "id": "save",
+      "options": {
+        "namespace": "untitled-game"
+      }
+    }
+  ]
+}

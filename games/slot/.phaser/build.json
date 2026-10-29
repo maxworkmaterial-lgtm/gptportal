@@ -1,0 +1,17 @@
+{
+  "site": "https://phaser.io",
+  "run": "untitled-game-mvtr3nly",
+  "game": "mZR4NAYceUd",
+  "design": "fKZ43ZZDXf3",
+  "slug": "untitled-game",
+  "title": "Untitled game",
+  "kind": "blank",
+  "core": "2d",
+  "screen": "1280x720",
+  "watch": "https://phaser.io/agent/watch/jqigu25xgwhe",
+  "desk": "https://phaser.io/agent/untitled-game",
+  "crewRoom": "https://phaser.io/agent/bots/crew?design=untitled-game",
+  "cli": "0.7.5",
+  "made": "2026-10-29T16:21:41.949Z",
+  "engine": "v3-82bf126"
+}
